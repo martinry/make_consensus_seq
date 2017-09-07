@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Sep  7 13:08:03 2017
-
-@author: martin
-"""
-
 seqs = []
 
 with open('msa.txt') as sequences:
