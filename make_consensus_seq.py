@@ -16,21 +16,21 @@ with open('msa.txt') as sequences:
 letters = ['A', 'C', 'G', 'T']
 
 iupac_codes = {
-     'A': [1, 0, 0, 0],
-     'C': [0, 1, 0, 0],
-     'G': [0, 0, 1, 0],
-     'T': [0, 0, 0, 1],
-     'W': [1, 0, 0, 1],
-     'S': [0, 1, 1, 0],
-     'Y': [0, 1, 0, 1],
-     'R': [1, 0, 1, 0],
-     'M': [1, 1, 0, 0],
-     'K': [0, 0, 1, 1],
-     'H': [1, 1, 0, 1],
-     'B': [0, 1, 1, 1],
-     'V': [1, 1, 1, 0],
-     'D': [1, 0, 1, 1],
-     'N': [1, 1, 1, 1]
+     'A': [1, 0, 0, 0],	# 	                (Adenine)
+     'C': [0, 1, 0, 0],	# 	                (Cytosine)
+     'G': [0, 0, 1, 0],	# 	                (Guanine)
+     'T': [0, 0, 0, 1],	# 	                (Thymine)
+     'R': [1, 0, 1, 0],	# 	= A or G        (puRines)
+     'Y': [0, 1, 0, 1],	# 	= C or T        (pYrimidines)
+     'W': [1, 0, 0, 1],	# 	= A or T        (Weak hydrogen bonding)
+     'S': [0, 1, 1, 0],	# 	= G or C        (Strong hydrogen bonding)
+     'M': [1, 1, 0, 0],	# 	= A or C        (aMino group at common position)
+     'K': [0, 0, 1, 1],	# 	= G or T        (Keto group at common position)
+     'H': [1, 1, 0, 1],	# 	= A, C or T     (not G)
+     'B': [0, 1, 1, 1],	# 	= G, C or T     (not A)
+     'V': [1, 1, 1, 0],	# 	= G, A, C       (not T)
+     'D': [1, 0, 1, 1],	# 	= G, A or T     (not C)
+     'N': [1, 1, 1, 1]	# 	= G, A, C or T  (aNy)
      }
 
 seq_length = len(seqs[0])
