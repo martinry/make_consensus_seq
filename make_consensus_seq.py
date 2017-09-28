@@ -31,7 +31,7 @@ seq_length = len(seqs[0])
 transposed_seqs = []
 
 
-for i in range(seq_length+1): # Count from zero to the number of nucleotides in the seq
+for i in range(seq_length): # Count from zero to the number of nucleotides in the seq
     nucleotides = [n[i] for n in seqs]  # For every sequence, take the nucleotide for the
                                         # current iteration
     transposed_seqs.append(nucleotides) # We now have a transposed list of the sequences
